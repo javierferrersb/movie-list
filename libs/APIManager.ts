@@ -6,6 +6,8 @@ import {
 } from "../global/interfaces";
 import { GetByImdbIDResponse, GetBySearchResponse } from "../global/types";
 
+const OMD_WEBSITE = "https://www.omdbapi.com/";
+
 async function GetBySearch(
     parameters: GetBySearchParams
 ): Promise<GetBySearchResponse> {
@@ -13,7 +15,7 @@ async function GetBySearch(
         apikey: process.env.NEXT_PUBLIC_OMDB_API_KEY,
         ...parameters,
     };
-    const response = await axios.get("http://www.omdbapi.com/", {
+    const response = await axios.get(OMD_WEBSITE, {
         params: params,
     });
     return response.data;
@@ -26,7 +28,7 @@ async function GetByImdbID(
         apikey: process.env.NEXT_PUBLIC_OMDB_API_KEY,
         ...parameters,
     };
-    const response = await axios.get("http://www.omdbapi.com/", {
+    const response = await axios.get(OMD_WEBSITE, {
         params: params,
     });
     return response.data;
@@ -39,7 +41,7 @@ async function GetByTitle(
         apikey: process.env.NEXT_PUBLIC_OMDB_API_KEY,
         ...parameters,
     };
-    const response = await axios.get("http://www.omdbapi.com/", {
+    const response = await axios.get(OMD_WEBSITE, {
         params: params,
     });
     return response.data;
