@@ -1,23 +1,20 @@
 import Head from "next/head";
-import Image from "next/image";
+import MovieCard from "../components/MovieCard";
+import MovieCardList from "../components/MovieCardList";
 
 export default function Home() {
-    return (
-        <div>
-            <Head>
-                <title>Movie List</title>
-                <meta name="description" content="Movie list" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+  return (
+    <div>
+      <Head>
+        <title>Lista de Películas</title>
+        <meta name="description" content="Lista de películas de una API" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-            <main className="font-sans">
-                <h1 className="">Movie List</h1>
-                <ul>
-                    <li>
-                        <a href="/details/1">Movie 1</a>
-                    </li>
-                </ul>
-            </main>
-        </div>
-    );
+      <main className="font-sans">
+        <h1 className="">Movie List</h1>
+        <MovieCardList />
+      </main>
+    </div>
+  );
 }
