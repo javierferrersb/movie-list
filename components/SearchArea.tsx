@@ -1,7 +1,24 @@
-function SearchArea() {
+import { useState } from "react";
+
+interface SearchAreaProps {
+  searchMovies: (searchQuery: string) => void;
+}
+
+function SearchArea(props: SearchAreaProps) {
+  const [searchText, setSearchText] = useState("");
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    props.searchMovies(searchText);
+  };
+
+  const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchText(event.target.value);
+  };
+
   return (
     <div className="ml-5 mr-5 mb-4">
-      <form>
+      <form onSubmit={handleSubmit}>
         <label
           htmlFor="movie-search"
           className="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -19,9 +36,9 @@ function SearchArea() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               ></path>
             </svg>
@@ -32,6 +49,8 @@ function SearchArea() {
             name="movie-search"
             id="movie-search"
             placeholder="Search for a movie"
+            value={searchText}
+            onChange={handleTextChange}
             required
           />
           <button
