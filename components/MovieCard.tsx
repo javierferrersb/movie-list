@@ -18,7 +18,7 @@ function MovieCard(props: MovieCardProps) {
           width={200}
           height={300}
         />
-        <div className="ml-1 flex-row p-2 md:ml-9 md:ml-0">
+        <div className="ml-1 flex-row p-2 md:ml-5">
           <div className="text-xl font-medium tracking-tight text-slate-900 group-hover:text-white dark:text-white">
             {props.title}
           </div>
