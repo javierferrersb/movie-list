@@ -1,34 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Movie List
 
-## Getting Started
+## Built with
 
-First, run the development server:
+- NextJS
+- Typescript
+- TailwindCSS
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Search movies
+- View movie details
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Getting started
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+To get a local copy up and running follow these simple steps.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Prerequisites
 
-## Learn More
+- Git
+- NodeJS
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```sh
+    git clone https://github.com/javierferrersb/movie-list.git
+    ```
 
-## Deploy on Vercel
+2. Install NPM packages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```sh
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Set the API Key:
+    - Obtain an API key from [Open Movie Database](https://www.omdbapi.com/)
+    - Create a `.env.local` file on the root directory
+    - Set the key as `NEXT_PUBLIC_OMDB_API_KEY` variable
+
+4. Run the app
+
+    ```sh
+    npm run dev
+    ```
+
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Author
+
+👤 **Javier Ferrer Sánchez-Barcaiztegui**
+
+- Github: [@javierferrersb](<https://github.com/javierferrersb>)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [NextJS](https://nextjs.org/)
+- [Open Movie Database](https://www.omdbapi.com/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Typescript](https://www.typescriptlang.org/)
