@@ -1,6 +1,6 @@
 interface GetBySearchParams {
   s: string;
-  type?: "movies" | "series" | "episode";
+  type?: "movie" | "series" | "episode";
   y?: number;
   r?: "json" | "xml";
   page?: number;
@@ -9,28 +9,28 @@ interface GetBySearchParams {
 }
 interface SearchMoviesParams {
   searchQuery: string;
-  searchType?: "movies";
+  searchType?: "movie";
   year?: number;
   page?: number;
 }
 
 interface GetMovieDetailsFromIDParams {
   imdbID: string;
-  searchType?: "movies";
+  searchType?: "movie";
   year?: number;
   plot?: "short" | "full";
 }
 
 interface GetMovieDetailsFromTitleParams {
   title: string;
-  searchType?: "movies";
+  searchType?: "movie";
   year?: number;
   plot?: "short" | "full";
 }
 
 interface GetByImdbIDParams {
   i: string;
-  type?: "movies" | "series" | "episode";
+  type?: "movie" | "series" | "episode";
   y?: number;
   plot?: "short" | "full";
   r?: "json" | "xml";
@@ -40,7 +40,7 @@ interface GetByImdbIDParams {
 
 interface GetByTitleParams {
   t: string;
-  type?: "movies" | "series" | "episode";
+  type?: "movie" | "series" | "episode";
   y?: number;
   plot?: "short" | "full";
   r?: "json" | "xml";

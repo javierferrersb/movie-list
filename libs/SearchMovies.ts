@@ -3,7 +3,8 @@ import { Movie } from "../global/types";
 import { GetBySearch } from "./APIManager";
 
 async function SearchMovies(parameters: SearchMoviesParams): Promise<Movie[]> {
-  const { searchQuery, searchType, year, page } = parameters;
+  let { searchQuery, searchType, year, page } = parameters;
+  searchType = "movie";
   const params = {
     s: searchQuery,
     type: searchType,
