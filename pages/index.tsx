@@ -43,7 +43,7 @@ export default function Home() {
           Movie List
         </h1>
         <SearchArea searchMovies={searchMovies} />
-        {movies.length > 0 && !loading && <MovieCardList movies={movies} />}
+        {movies.length > 0 && <MovieCardList movies={movies} />}
         {loading && <MovieCardListSkeleton numberOfMovies={10} />}
         {error && <ErrorDisplay error={errorMessage} />}
       </main>
