@@ -12,7 +12,9 @@ export default function Home() {
       </Head>
 
       <main className="font-sans">
-        <h1 className="">Movie List</h1>
+        <h1 className="mt-0 mb-6 py-5 px-5 text-4xl font-bold tracking-tight text-slate-900">
+          Movie List
+        </h1>
         <MovieCardList />
       </main>
     </div>
