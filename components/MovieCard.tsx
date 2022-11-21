@@ -11,7 +11,7 @@ interface MovieCardProps {
 function MovieCard(props: MovieCardProps) {
   return (
     <Link href={`/details/${props.id}`}>
-      <div className="group m-2 flex h-48 cursor-pointer flex-row items-center rounded-xl bg-white shadow-xl ring-1 ring-slate-900/5 hover:bg-blue-500 dark:bg-slate-800 dark:hover:bg-blue-700 md:max-w-md">
+      <div className="group m-2 flex h-48 cursor-pointer flex-row items-center rounded-xl bg-white shadow-xl ring-1 ring-slate-900/5 hover:bg-blue-500 active:bg-blue-700 dark:bg-slate-800 dark:hover:bg-blue-700 dark:active:bg-blue-900 md:max-w-md">
         {props.poster_path === "N/A" ? (
           <></>
         ) : (
