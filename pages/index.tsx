@@ -1,5 +1,6 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import ErrorDisplay from "../components/ErrorDisplay";
 import MovieCardList from "../components/MovieCardList";
 import SearchArea from "../components/SearchArea";
@@ -12,11 +13,25 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [error, setError] = useState(false);
+  const [searchText, setSearchText] = useState("");
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.query.search && router.query.search !== "") {
+      searchMovies(router.query.search as string);
+      setSearchText(router.query.search as string);
+    }
+  }, [router.query.search]);
 
   const searchMovies = (searchQuery: string) => {
     setMovies([]);
     setLoading(true);
     setError(false);
+    router.query.search = searchQuery;
+    router.push({
+      pathname: "/",
+      query: { search: searchQuery },
+    });
     SearchMovies({
       searchQuery,
     })
